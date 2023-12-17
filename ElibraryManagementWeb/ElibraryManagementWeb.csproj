@@ -71,6 +71,7 @@
     <Content Include="BootStrap\js\bootstrap.min.js" />
     <Content Include="BootStrap\js\jquery-3.3.1.slim.min.js" />
     <Content Include="BootStrap\js\popper.min.js" />
+    <Content Include="css\CustomStyleSheet.css" />
     <Content Include="datatables\css\jquery.dataTables.min.css" />
     <Content Include="datatables\js\jquery.dataTables.min.js" />
     <Content Include="fontawesome\css\all.css" />
@@ -2146,10 +2147,41 @@
     <Content Include="fontawesome\svgs\solid\yen-sign.svg" />
     <Content Include="fontawesome\svgs\solid\yin-yang.svg" />
     <Content Include="fontawesome\svgs\solid\z.svg" />
+    <Content Include="imgs\adminuser.png" />
+    <Content Include="imgs\book-online.png" />
+    <Content Include="imgs\book.png" />
+    <Content Include="imgs\books.png" />
+    <Content Include="imgs\books1.png" />
+    <Content Include="imgs\defaulters-list.png" />
+    <Content Include="imgs\digital-data.png" />
+    <Content Include="imgs\digital-inventory.png" />
+    <Content Include="imgs\generaluser.png" />
+    <Content Include="imgs\home-bg.jpg" />
+    <Content Include="imgs\in-homepage-banner.jpg" />
+    <Content Include="imgs\library.png" />
+    <Content Include="imgs\publisher.png" />
+    <Content Include="imgs\search-online.png" />
+    <Content Include="imgs\sign-up.png" />
+    <Content Include="imgs\writer.png" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="fontawesome\less\brands.less" />
@@ -2206,6 +2238,7 @@
     <Content Include="fontawesome\webfonts\fa-v4compatibility.ttf" />
     <Content Include="fontawesome\webfonts\fa-v4compatibility.woff2" />
     <None Include="packages.config" />
+    <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
