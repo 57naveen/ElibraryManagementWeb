@@ -202,8 +202,8 @@
                                 <div class="form-group">
                                     <center>
 
-                                        <asp:Button ID="Button1"   class="btn btn-primary btn-block btn-lg" runat="server" Text="Button" />
-                                        
+                                        <asp:Button ID="Button1" class="btn btn-primary btn-block btn-lg" runat="server" Text="Button" />
+
                                     </center>
                                 </div>
 
@@ -215,7 +215,7 @@
                     </div>
                 </div>
 
-                <b><a href="homepage.aspx"><< Back To Home</a></b>
+               <b><a href="homepage.aspx"><i class="fa-solid fa-circle-arrow-left"></i> Back To Home</a></b>
             </div>
 
             <div class="col-md-7">

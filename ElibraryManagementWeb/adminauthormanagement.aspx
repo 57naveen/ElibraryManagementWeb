@@ -82,8 +82,7 @@
 
                     </div>
                 </div>
-
-                <b><a href="homepage.aspx"><< Back To Home</a></b>
+                <b><a href="homepage.aspx"><i class="fa-solid fa-circle-arrow-left"></i> Back To Home</a></b>
             </div>
 
             <div class="col-md-7">
