@@ -99,7 +99,6 @@
                                 <center>
                                     <h4>Publisher List</h4>
 
-
                                 </center>
                             </div>
                         </div>
