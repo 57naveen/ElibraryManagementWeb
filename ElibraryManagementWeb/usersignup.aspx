@@ -191,8 +191,10 @@
 
 
                                 <div class="form-group">
-                                    <a href="usersignup.aspx">
-                                        <input id="Button2" class="btn btn-success btn-block btn-lg" type="button" value="Sign Up" /></a>
+                                    
+                                        <asp:Button ID="Button1"  class="btn btn-success btn-block btn-lg"  type="button" value="Sign Up" runat="server" Text="Sign Up" OnClick="Button1_Click" />
+
+                                 
                                 </div>
 
                             </div>

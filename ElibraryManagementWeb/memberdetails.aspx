@@ -72,9 +72,6 @@
 
 
 
-
-
-
                         </div>
 
                         <div class="row">
@@ -131,7 +128,7 @@
                                 <label>City</label>
                                 <div class="form-group">
 
-                                    <asp:TextBox CssClass="form-control" placeholder="City" ReadOnly="true" ID="TextBox6"  runat="server"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" placeholder="City" ReadOnly="true" ID="TextBox6" runat="server"></asp:TextBox>
 
 
                                 </div>
@@ -142,7 +139,7 @@
                                 <label>Pincode</label>
                                 <div class="form-group">
 
-                                    <asp:TextBox CssClass="form-control" placeholder="Pincode" ReadOnly="true" ID="TextBox9"  runat="server"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" placeholder="Pincode" ReadOnly="true" ID="TextBox9" runat="server"></asp:TextBox>
 
 
                                 </div>
@@ -153,31 +150,24 @@
 
                         </div>
 
-                         <div class="row">
+                        <div class="row">
 
 
-     <div class="col-md-12">
-         <label>Full Postal Address</label>
-         <div class="form-group">
-             <asp:TextBox CssClass="form-control" placeholder="Full Postal Address" ReadOnly="true" TextMode="MultiLine" ID="TextBox10" Rows="2" runat="server"></asp:TextBox>
+                            <div class="col-md-12">
+                                <label>Full Postal Address</label>
+                                <div class="form-group">
+                                    <asp:TextBox CssClass="form-control" placeholder="Full Postal Address" ReadOnly="true" TextMode="MultiLine" ID="TextBox10" Rows="2" runat="server"></asp:TextBox>
 
-         </div>
+                                </div>
 
-     </div>
-
-    
-
-
-
-
- </div>
+                            </div>
 
 
 
 
 
 
-
+                        </div>
 
 
 
@@ -188,7 +178,7 @@
 
 
                             </div>
-                            
+
 
                         </div>
 
