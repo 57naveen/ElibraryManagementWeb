@@ -39,8 +39,18 @@ namespace ElibraryManagementWeb
                 if(dr.HasRows)
                 {
                     while(dr.Read()) {
-                        Response.Write("<script>alert('"+dr.GetValue(8).ToString()+"');</script>");
+                        Response.Write("<script>alert('Login Successful');</script>");
+
+                        Session["username"] = dr.GetValue(8).ToString();
+                        Session["fullname"] = dr.GetValue(0).ToString();
+                        Session["role"] ="user";
+                        Session["status"] = dr.GetValue(10).ToString();
+
+
+
                     }
+
+                    Response.Redirect("homepage.aspx");
                 }
                 else
                 {
@@ -52,9 +62,14 @@ namespace ElibraryManagementWeb
             }
             catch (Exception ex) 
             {
+
             }   
 
 
         }
+
+
+
+
     }
 }
