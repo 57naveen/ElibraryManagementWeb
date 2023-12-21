@@ -26,11 +26,68 @@ namespace ElibraryManagementWeb
         {
             //Response.Write("<script>alert('Testing');</script>");
 
+
+            if(checkMemberExist())
+            {
+                Response.Write("<script>alert('Member already exist with this member ID');</script>");
+            }
+            else
+            {
+                signUpNewUser();
+            }
+
+        }
+
+
+
+
+        //user define method
+        bool checkMemberExist()
+        {
             try
             {
-               SqlConnection con = new SqlConnection(strcon);
+                SqlConnection con = new SqlConnection(strcon);
 
-                if(con.State == ConnectionState.Closed )
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+
+                SqlCommand cmd = new SqlCommand("select*from member_master_tbl where member_id='"+TextBox8.Text.Trim()+"' ", con);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+
+                if(dt.Rows.Count >=1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+                return false;
+            }
+
+            
+        }
+
+        
+        void signUpNewUser()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+
+                if (con.State == ConnectionState.Closed)
                 {
                     con.Open();
                 }
@@ -48,7 +105,7 @@ namespace ElibraryManagementWeb
                 cmd.Parameters.AddWithValue("@member_id", TextBox8.Text.Trim());
                 cmd.Parameters.AddWithValue("@password", TextBox9.Text.Trim());
                 cmd.Parameters.AddWithValue("@account_status", "pending");
-                
+
 
                 cmd.ExecuteNonQuery();
                 con.Close();
@@ -57,12 +114,8 @@ namespace ElibraryManagementWeb
             }
             catch (Exception ex)
             {
-                Response.Write("<script>alert('"+ex.Message+"');</script>");
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
-
-
-
-
 
         }
     }
