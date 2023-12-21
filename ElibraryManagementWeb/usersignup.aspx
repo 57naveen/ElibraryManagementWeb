@@ -35,7 +35,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" placeholder="Full Name" ID="TextBox2" runat="server"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" placeholder="Full Name" ID="TextBox1" runat="server"></asp:TextBox>
 
                                 </div>
                             </div>
@@ -43,7 +43,7 @@
                             <div class="col-md-6">
 
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" placeholder="Date of Birth" TextMode="Date" ID="TextBox3" runat="server"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" placeholder="Date of Birth" TextMode="Date" ID="TextBox2" runat="server"></asp:TextBox>
 
                                 </div>
 
@@ -54,7 +54,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" placeholder="Contact Number" ID="TextBox1" runat="server"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" placeholder="Contact Number" ID="TextBox3" runat="server"></asp:TextBox>
 
                                 </div>
                             </div>
