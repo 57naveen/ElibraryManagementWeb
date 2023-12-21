@@ -42,13 +42,13 @@
 
 
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" placeholder="Password" TextMode="password" runat="server"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" placeholder="Password"  ID="TextBox2" TextMode="password" runat="server"></asp:TextBox>
 
                                 </div>
 
 
                                 <div class="form-group">
-                                    <asp:Button ID="Button1" class="btn btn-success btn-block btn-lg" runat="server" Text="Login" />
+                                    <asp:Button ID="Button1" class="btn btn-success btn-block btn-lg" runat="server" Text="Login" OnClick="Button1_Click" />
                                 </div>
 
 
