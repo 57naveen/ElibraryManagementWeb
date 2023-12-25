@@ -9,41 +9,42 @@ namespace ElibraryManagementWeb
 
             try
             {
-                if (Session["role"] != null && Session["role"].Equals(""))
+                if (Session["role"] == null || string.IsNullOrEmpty(Session["role"].ToString()))
                 {
-                    LinkButton1.Visible = true; // user login link button
-                    LinkButton2.Visible = true; // sign up link button
+                    // User not logged in
+                    LinkButton1.Visible = true;  // user login link button
+                    LinkButton2.Visible = true;  // sign up link button
+                    LinkButton6.Visible = true;  // admin login link button
+
+                    // ... hide other buttons based on your requirements
+
 
                     LinkButton3.Visible = false; // logout link button
                     LinkButton7.Visible = false; // hello user link button
-
-
-                    LinkButton6.Visible = true; // admin login link button
                     LinkButton11.Visible = false; // author management link button
                     LinkButton12.Visible = false; // publisher management link button
                     LinkButton8.Visible = false; // book inventory link button
                     LinkButton9.Visible = false; // book issuing link button
                     LinkButton10.Visible = false; // member management link button
-
                 }
-                else if (Session["role"] != null && Session["role"].Equals("user"))
+                else if (Session["role"].ToString() == "user")
                 {
+                    // User logged in
                     LinkButton1.Visible = false; // user login link button
                     LinkButton2.Visible = false; // sign up link button
-
-                    LinkButton3.Visible = true; // logout link button
-                    LinkButton7.Visible = true; // hello user link button
+                    LinkButton3.Visible = true;  // logout link button
+                    LinkButton7.Visible = true;  // hello user link button
                     LinkButton7.Text = "Hello " + Session["username"].ToString();
+                    LinkButton6.Visible = true;  // admin login link button
 
-
-                    LinkButton6.Visible = true; // admin login link button
+                     // ... hide other buttons based on your requirements
                     LinkButton11.Visible = false; // author management link button
                     LinkButton12.Visible = false; // publisher management link button
                     LinkButton8.Visible = false; // book inventory link button
                     LinkButton9.Visible = false; // book issuing link button
                     LinkButton10.Visible = false; // member management link button
                 }
-                else if (Session["role"] != null && Session["role"].Equals("admin"))
+                else if (Session["role"].ToString() == "admin")
                 {
                     LinkButton1.Visible = false; // user login link button
                     LinkButton2.Visible = false; // sign up link button
@@ -59,12 +60,77 @@ namespace ElibraryManagementWeb
                     LinkButton8.Visible = true; // book inventory link button
                     LinkButton9.Visible = true; // book issuing link button
                     LinkButton10.Visible = false; // member management link button
+
+
+
                 }
             }
             catch (Exception ex)
             {
-
+                // Handle the exception if necessary
             }
+
+
+
+
+            //try
+            //{
+            //    if (Session["role"] != null && Session["role"].Equals(""))
+            //    {
+            //        LinkButton1.Visible = true; // user login link button
+            //        LinkButton2.Visible = true; // sign up link button
+
+            //        LinkButton3.Visible = false; // logout link button
+            //        LinkButton7.Visible = false; // hello user link button
+
+
+            //        LinkButton6.Visible = true; // admin login link button
+            //        LinkButton11.Visible = false; // author management link button
+            //        LinkButton12.Visible = false; // publisher management link button
+            //        LinkButton8.Visible = false; // book inventory link button
+            //        LinkButton9.Visible = false; // book issuing link button
+            //        LinkButton10.Visible = false; // member management link button
+
+            //    }
+            //    else if (Session["role"] != null && Session["role"].Equals("user"))
+            //    {
+            //        LinkButton1.Visible = false; // user login link button
+            //        LinkButton2.Visible = false; // sign up link button
+
+            //        LinkButton3.Visible = true; // logout link button
+            //        LinkButton7.Visible = true; // hello user link button
+            //        LinkButton7.Text = "Hello " + Session["username"].ToString();
+
+
+            //        LinkButton6.Visible = true; // admin login link button
+            //        LinkButton11.Visible = false; // author management link button
+            //        LinkButton12.Visible = false; // publisher management link button
+            //        LinkButton8.Visible = false; // book inventory link button
+            //        LinkButton9.Visible = false; // book issuing link button
+            //        LinkButton10.Visible = false; // member management link button
+            //    }
+            //    else if (Session["role"] != null && Session["role"].Equals("admin"))
+            //    {
+            //        LinkButton1.Visible = false; // user login link button
+            //        LinkButton2.Visible = false; // sign up link button
+
+            //        LinkButton3.Visible = true; // logout link button
+            //        LinkButton7.Visible = true; // hello user link button
+            //        LinkButton7.Text = "Hello Admin";
+
+
+            //        LinkButton6.Visible = false; // admin login link button
+            //        LinkButton11.Visible = true; // author management link button
+            //        LinkButton12.Visible = true; // publisher management link button
+            //        LinkButton8.Visible = true; // book inventory link button
+            //        LinkButton9.Visible = true; // book issuing link button
+            //        LinkButton10.Visible = false; // member management link button
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+
+            //}
         }
 
         protected void Admin_Login(object sender, EventArgs e)
