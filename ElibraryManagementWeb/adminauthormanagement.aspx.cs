@@ -11,7 +11,7 @@ namespace ElibraryManagementWeb
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            GridView1.DataBind();
         }
 
         // Add button click
@@ -94,6 +94,7 @@ namespace ElibraryManagementWeb
                 Response.Write("<script>alert('Author Deleted successfull');</script>");
 
                 clearForm();
+                GridView1.DataBind();
 
             }
             catch (Exception ex)
@@ -127,6 +128,7 @@ namespace ElibraryManagementWeb
                 Response.Write("<script>alert('Author Updated successfull');</script>");
 
                 clearForm();
+                GridView1.DataBind();
 
             }
             catch (Exception ex)
@@ -151,7 +153,7 @@ namespace ElibraryManagementWeb
 
                 cmd.Parameters.AddWithValue("@author_id", TextBox2.Text.Trim());
                 cmd.Parameters.AddWithValue("@author_name", TextBox3.Text.Trim());
-                ;
+                
 
 
                 cmd.ExecuteNonQuery();
@@ -159,6 +161,7 @@ namespace ElibraryManagementWeb
                 Response.Write("<script>alert('Author added  successfull');</script>");
 
                 clearForm();
+                GridView1.DataBind();
 
             }
             catch (Exception ex)

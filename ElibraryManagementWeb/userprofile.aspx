@@ -72,9 +72,6 @@
                         </div>
 
 
-
-
-                        <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <asp:DropDownList ID="DropDownList1" CssClass="form-control" runat="server">
@@ -111,6 +108,7 @@
                                         <asp:ListItem Text="West Bengal" Value="West Bengal" />
                                     </asp:DropDownList>
 
+
                                 </div>
                             </div>
 
@@ -131,7 +129,7 @@
                                 </div>
 
                             </div>
-                        </div>
+                        </idiv>
 
 
 
