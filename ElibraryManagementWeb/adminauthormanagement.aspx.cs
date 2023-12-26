@@ -63,6 +63,8 @@ namespace ElibraryManagementWeb
         protected void Button1_Click(object sender, EventArgs e)
         {
 
+            authorbyID();
+
         }
 
 
@@ -70,6 +72,46 @@ namespace ElibraryManagementWeb
 
 
         //user define function
+
+
+
+        void authorbyID()
+        {
+
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+
+                SqlCommand cmd = new SqlCommand("select*from author_master_tbl where author_id='" + TextBox2.Text.Trim() + "' ", con);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+
+                if (dt.Rows.Count >= 1)
+                {
+                   TextBox3.Text = dt.Rows[0][1].ToString();
+                }
+                else
+                {
+                    Response.Write("<script>alert('Invalid');</script>");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+               
+            }
+
+        }
 
         void DeleteAuthor()
         {

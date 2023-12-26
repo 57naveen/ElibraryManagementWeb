@@ -25,7 +25,8 @@
     <script src="BootStrap/js/popper.min.js"></script>
     <%-- bootstrap js--%>
     <script src="BootStrap/js/bootstrap.min.js"></script>
-
+     <%-- Datatable js--%>
+    <script src="datatables/js/jquery.dataTables.min.js"></script>
 
         
     <asp:ContentPlaceHolder ID="head" runat="server">
