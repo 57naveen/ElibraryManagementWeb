@@ -224,19 +224,13 @@
                         <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="book_id" DataSourceID="SqlDataSource1">
                             <Columns>
                                 <asp:BoundField DataField="book_id" HeaderText="book_id" ReadOnly="True" SortExpression="book_id" />
-                                <asp:BoundField DataField="book_name" HeaderText="book_name" SortExpression="book_name" />
-                                <asp:BoundField DataField="genre" HeaderText="genre" SortExpression="genre" />
-                                <asp:BoundField DataField="author_name" HeaderText="author_name" SortExpression="author_name" />
-                                <asp:BoundField DataField="publisher_name" HeaderText="publisher_name" SortExpression="publisher_name" />
-                                <asp:BoundField DataField="publish_date" HeaderText="publish_date" SortExpression="publish_date" />
-                                <asp:BoundField DataField="language" HeaderText="language" SortExpression="language" />
-                                <asp:BoundField DataField="edition" HeaderText="edition" SortExpression="edition" />
-                                <asp:BoundField DataField="book_cost" HeaderText="book_cost" SortExpression="book_cost" />
-                                <asp:BoundField DataField="no_of_pages" HeaderText="no_of_pages" SortExpression="no_of_pages" />
-                                <asp:BoundField DataField="book_description" HeaderText="book_description" SortExpression="book_description" />
-                                <asp:BoundField DataField="actual_stock" HeaderText="actual_stock" SortExpression="actual_stock" />
-                                <asp:BoundField DataField="current_stock" HeaderText="current_stock" SortExpression="current_stock" />
-                                <asp:BoundField DataField="book_img_link" HeaderText="book_img_link" SortExpression="book_img_link" />
+                               
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                      
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                               
                             </Columns>
                          </asp:GridView>
                      </div>
