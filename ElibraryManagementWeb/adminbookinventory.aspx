@@ -128,7 +128,7 @@
                               <asp:ListItem Text="Thriller" Value="Thriller" />
                               <asp:ListItem Text="Art" Value="Art" />
                               <asp:ListItem Text="Autobiography" Value="Autobiography" />
-                              <asp:ListItem Text="Encyclopedia" Value="Encyclopedia" />
+                              <asp:ListItem Text="Encyclopedia" Value="Encyclopedia" />        
                               <asp:ListItem Text="Health" Value="Health" />
                               <asp:ListItem Text="History" Value="History" />
                               <asp:ListItem Text="Math" Value="Math" />
